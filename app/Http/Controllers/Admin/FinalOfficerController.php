@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
+
 use Illuminate\Support\Facades\View;
+
 use Illuminate\Support\Facades\Session;
 
 
@@ -22,6 +24,7 @@ class FinalOfficerController extends Controller
     {
 
         $this->middleware('auth:admin');
+
     }
 
     /**
@@ -175,6 +178,6 @@ class FinalOfficerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Redirect::back();
     }
 }
